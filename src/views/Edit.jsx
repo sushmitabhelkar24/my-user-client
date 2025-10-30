@@ -15,7 +15,7 @@ function Edit() {
 
     const editTeacher = async() => {
         try{
-      const response =await axios.put(`https://backend-method-server.onrender.com/teachers/${userid}`,{
+      const response =await axios.put(`${import.meta.env.VITE_API_URL}/teachers/${userid}`,{
         id:teacher.id,
         name:teacher.name,
         city:teacher.city
@@ -31,7 +31,7 @@ function Edit() {
 
     const loadteachers = async()=>{
        try{
-        const response = await axios.get(`https://backend-method-server.onrender.com/teachers/${userid}`);
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/teachers/${userid}`);
         setTeacher(response.data.data);
     }
     catch(e){

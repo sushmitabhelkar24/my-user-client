@@ -8,7 +8,7 @@ import EditIco from './../assets/edit.png'
 
 function TeacherCard({id,name,city,loadteachers}) {
 const deleteTeacher = async() => {
-    const response =await axios.delete(`https://backend-method-server.onrender.com/teachers/${id}`);
+    const response =await axios.delete(`${import.meta.env.VITE_API_URL}/teachers/${id}`);
 
     if(response.data.success){
         toast.success(response.data.message);

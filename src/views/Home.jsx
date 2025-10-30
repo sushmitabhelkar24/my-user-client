@@ -8,9 +8,8 @@ function Home() {
   const [teachers,setTeachers] = useState([]);
 
   const loadteachers = async()=>{
-    const response = await axios.get ("https://backend-method-server.onrender.com/teachers");
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/teachers`);
     setTeachers(response.data.data);
-
   };
 
   useEffect(()=>{

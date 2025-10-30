@@ -12,7 +12,7 @@ function Add() {
 
     const addTeacher = async() => {
         try{
-      const response =await axios.post("https://backend-method-server.onrender.com/teachers",{
+      const response =await axios.post(`${import.meta.env.VITE_API_URL}/teachers`,{
         id:teacher.id,
         name:teacher.name,
         city:teacher.city
