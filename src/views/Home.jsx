@@ -8,7 +8,7 @@ function Home() {
   const [teachers,setTeachers] = useState([]);
 
   const loadteachers = async()=>{
-    const response = await axios.get ("http://localhost:5005/teachers");
+    const response = await axios.get ("https://backend-method-server.onrender.com/teachers");
     setTeachers(response.data.data);
 
   };

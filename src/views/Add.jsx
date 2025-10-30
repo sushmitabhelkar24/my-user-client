@@ -12,7 +12,7 @@ function Add() {
 
     const addTeacher = async() => {
         try{
-      const response =await axios.post("http://localhost:5005/teachers",{
+      const response =await axios.post("https://backend-method-server.onrender.com/teachers",{
         id:teacher.id,
         name:teacher.name,
         city:teacher.city
